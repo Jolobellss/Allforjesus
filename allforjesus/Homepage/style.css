@@ -1,0 +1,489 @@
+body {
+  margin: 0;
+  padding: 0;
+  cursor: url('cross.cur'), auto;
+}
+
+/* Style the header */
+
+header {
+  background-color: #4a6c81;
+  color: #b7e4c7;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.5s ease;
+  backface-visibility: hidden;
+}
+
+header:hover {
+  background-color: #b7e4c7;
+  color: #4a6c81;
+}
+
+.logo img:hover {
+  transform: rotate(360deg);
+  transition: transform 0.5s ease;
+}
+
+.logo img {
+  width: 120px;
+  height: 120px;
+  margin-right: 20px;
+}
+
+.church-name {
+  flex-grow: 1;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: #b7e4c7;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  position: relative;
+}
+
+nav a:hover {
+  color: #447695;
+  background-color: #b7e4c7;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  z-index: 1;
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #1bb350;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+nav a:hover::before {
+  transform: scaleX(1);
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: #4a6c81;
+  transform: rotateY(180deg);
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+
+nav a:hover::after {
+  transform: rotateY(0);
+}
+
+nav a:hover {
+  transform: rotateY(180deg);
+  transition: transform 0.5s ease;
+  box-shadow: 0 0 10px #b7e4c7;
+  transition: box-shadow 0.5s ease;
+}
+
+nav a.active {
+  color: #2879ab;
+}
+
+
+/* Style the main content */
+/* Style the Welcome section */
+.Welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('Welcome.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.Welcome::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.Welcome h2,
+.Welcome p,
+.Welcome button {
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+}
+
+.Welcome h2 {
+  font-size: 4em;
+  margin-bottom: 0.2em;
+  text-shadow: 2px 2px #000;
+}
+
+.Welcome p {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  text-shadow: 2px 2px #000;
+}
+
+.Welcome button {
+  background-color: #1bb350;
+  border: none;
+  color: #fff;
+  padding: 1em 2em;
+  border-radius: 0.3em;
+  font-size: 1.2em;
+  cursor: pointer;
+  text-shadow: 2px 2px #000;
+  transition: background-color 0.5s ease;
+}
+
+.Welcome button:hover {
+  background-color: #b7e4c7;
+  color: #4a6c81;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+/*Style the Service*/
+.Service {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.Service h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 2px #ccc;
+}
+
+.Service p {
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.Service ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Service li {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.Service li span {
+  font-size: 20px;
+  color: #666;
+  margin-left: 10px;
+  float: right;
+}
+
+.Service li:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.Service p:last-child {
+  margin-bottom: 0;
+}
+
+/*Cycle*/
+
+.Discipleship {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #2c3e50;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.Discipleship h2 {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.Discipleship p {
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.Discipleship img {
+  display: block;
+  margin: 0 auto;
+  max-width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/*Style the Events*/
+.UpcomingEvents {
+  background-color: #f2f2f2;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.UpcomingEvents h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.UpcomingEvents-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.UpcomingEvents-item {
+  margin-bottom: 30px;
+}
+.UpcomingEvents-item:hover {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.UpcomingEvents-item img {
+  max-width: 100%;
+}
+
+.UpcomingEvents-item h3 {
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+.UpcomingEvents-item p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.UpcomingEvents-item button {
+  margin-top: 20px;
+}
+
+
+/* Style the footer */
+footer {
+  background-color: #535d64;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.8em;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+/* Style for Mission section */
+.Mission {
+  background-color: #fff8f0;
+  padding: 100px 0;
+  text-align: center;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.Mission h2 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #4a6c81;
+  margin-bottom: 30px;
+}
+
+.Mission p {
+  font-size: 24px;
+  color: #4a6c81;
+  margin-bottom: 50px;
+}
+
+/* Style for Vision section */
+.Vision {
+  background-color: #4a6c81;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.Vision h2 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.Vision p {
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+
+/* Customize the scroll bar */
+::-webkit-scrollbar {
+  width: 10px; /* Set width of scroll bar */
+}
+
+/* Customize the scroll bar track */
+::-webkit-scrollbar-track {
+  background: #4a6c81; /* Set background color of scroll bar track */
+}
+
+/* Customize the scroll bar thumb */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Set background color of scroll bar thumb */
+  border-radius: 10px; /* Set border radius of scroll bar thumb */
+}
+
+/* Customize the scroll bar thumb when hovering */
+::-webkit-scrollbar-thumb:hover {
+  background: #17bc08; /* Set background color of scroll bar thumb when hovering */
+}
+
+ 
+/* Style the header for screens smaller than 600px */
+@media only screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    margin-top: 20px;
+  }
+
+  nav li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/* Style the Welcome section for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+  .Welcome h2 {
+    font-size: 3em;
+  }
+
+  .Welcome p {
+    font-size: 1.2em;
+  }
+
+  .Welcome button {
+    font-size: 1em;
+  }
+}
+
+/* Style the Service section for screens smaller than 1024px */
+@media only screen and (max-width: 1024px) {
+  .Service h2 {
+    font-size: 30px;
+  }
+
+  .Service p {
+    font-size: 18px;
+  }
+
+  .Service li {
+    font-size: 20px;
+  }
+}
+/* Style the header for screens smaller than 600px */
+@media only screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    margin-top: 20px;
+  }
+
+  nav li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/* Style the Welcome section for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+  .Welcome h2 {
+    font-size: 3em;
+  }
+
+  .Welcome p {
+    font-size: 1.2em;
+  }
+
+  .Welcome button {
+    font-size: 1em;
+  }
+}
+
+/* Style the Service section for screens smaller than 1024px */
+@media only screen and (max-width: 1024px) {
+  .Service h2 {
+    font-size: 30px;
+  }
+
+  .Service p {
+    font-size: 18px;
+  }
+
+  .Service li {
+    font-size: 20px;
+  }
+}
