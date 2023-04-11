@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us | All For Jesus</title>
+  <link rel="stylesheet" href="about.css">
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+  <script>
+    function initMap() {
+      var churchLocation = {lat: 14.676839669002412,lng: 121.06647155096145};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: churchLocation
+      });
+      var marker = new google.maps.Marker({
+        position: churchLocation,
+        map: map
+      });
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="../Homepage/Afj.html">AFJ</a>
+      </div>
+      <ul class="menu">
+        <li><a href="../Homepage/Afj.html">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="ministries">Ministries</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section class="about">
+    <div class="container">
+      <h1>About Us</h1>
+      <p></p>
+    </div>
+  </section>
+  
+  <section class="ministries">
+    <div class="container">
+      <h1>Ministries</h1>
+      <section class="ministries">
+        <div class="container">
+          <h1>Ministries</h1>
+          <div class="gallery">
+            <div class="gallery-item">
+              <img src="images (1).jpeg" alt="Ministry 1">
+              <div class="overlay">
+                <h2>Music Team</h2>
+                <p>kasama sa pangkat na ito ang mga indibidwal na tumutugtog ng mga instrumento at/o kumakanta. Ang mga instrumentong nakalista ay gitara, tambol, keyboard, at bass.</p>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="images.jpg" alt="Ministry 2">
+              <div class="overlay">
+                <h2>Dance Team</h2>
+                <p>Mga indibidwal na bihasa sa iba't ibang uri ng sayaw, gaya ng moderno o sayaw ng pagsamba, at maaari ding kabilang ang mga indibidwal na tumutugtog ng mga instrumentong percussion tulad ng mga tamburin.</p>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="IMG_20230217_191021.jpg" alt="Ministry 3">
+              <div class="overlay">
+                <h2>Multimedia Team</h2>
+                <p>Ang multimedia team ay gumaganap ng isang mahalagang papel sa pagtataguyod at pagpapahusay ng mensahe at misyon ng simbahan sa pamamagitan ng digital media.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+  <section class="contact">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </section>
+  <section class="location">
+    <div class="container">
+      <h1>Where to Find Us</h1>
+      <div class="map-container">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2135.091153794509!2d121.06104287595565!3d14.676663205230026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b74dc1f80b81%3A0x74b20ca52caec1ef!2sThe%20Church%20of%20All%20For%20Jesus%20Ministry!5e0!3m2!1sen!2sph!4v1681146455348!5m2!1sen!2sph" width="600" height="450" style="border: 10px;;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <p>14 Sampaguita St, Pasong Tamo, Quezon City, 1107 Metro Manila</p>
+    </div>
+  </section>
+  
+  
+
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 All For Jesus</p>
+    </div>
+  </footer>
+</body>
+</html>
